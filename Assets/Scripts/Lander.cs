@@ -45,7 +45,7 @@ public class Lander : MonoBehaviour
         for (int i = 0; i < thrusters.Count && i < input.thrusters_throttle.Count; i++) {
             thrusters[i].throttle = Mathf.Clamp(input.thrusters_throttle[i].throttle, 0, 1);
             thrusters[i].x_dir = Mathf.Clamp(input.thrusters_throttle[i].x_dir, -15, 15);
-            thrusters[i].z_dir = Mathf.Clamp(input.thrusters_throttle[i].z_dir, 15, 15);
+            thrusters[i].z_dir = Mathf.Clamp(input.thrusters_throttle[i].z_dir, -15, 15);
         }
         for (int i = 0; i < rotators.Count && i < input.rotator_throttle.Count; i++)
         {
